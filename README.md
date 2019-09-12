@@ -2,7 +2,11 @@
 Source code of Dagger 2 Tutorial (Arcademy.ir)
 
 
-`
-برای مشاهده سورس قسمت مورد نظر ، بر روی branch کلیک کنید ومورد مشخص رو انتخاب کنید.
-for choose specific episode soruce click on brach and select that 
-`
+
+برای مشاهده سورس کد قسمت مورد نظر ، بر روی ``برنچ`` کلیک کنید و مورد مشخص رو انتخاب کنید
+
+
+
+
+for choose specific episode source click on `` branch `` and select that
+
