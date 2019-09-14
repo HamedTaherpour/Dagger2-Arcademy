@@ -1,6 +1,9 @@
 package ir.arcademy.sinadalvand.dagger2
 
-class Zcript(val str:String,val iv:String) {
+import android.util.Log
+import javax.inject.Inject
+
+class Zcript @Inject constructor() {
 
 
     fun encrypt(str:String):String{
@@ -8,6 +11,7 @@ class Zcript(val str:String,val iv:String) {
     }
 
     fun decrypt(str:String):String{
+        Log.e("Dagger2","Decrypt run ...")
         return str
     }
 
