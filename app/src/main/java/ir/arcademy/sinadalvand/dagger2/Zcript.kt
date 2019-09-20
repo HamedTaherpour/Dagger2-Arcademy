@@ -3,9 +3,9 @@ package ir.arcademy.sinadalvand.dagger2
 import android.util.Log
 import javax.inject.Inject
 
-class Zcript @Inject constructor(val zsecure: Zsecure) {
+class Zcript @Inject constructor() {
 
-    @Inject
+
     var zsecure: Zsecure? = null
 
 
