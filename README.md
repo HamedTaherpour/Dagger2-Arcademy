@@ -10,3 +10,8 @@ Source code of Dagger 2 Tutorial (Arcademy.ir)
 
 for choose specific episode source click on `` branch `` and select that
 
+
+
+
+![guide image](https://github.com/sinadalvand/Dagger2-Arcademy/blob/master/art/guide-01.png)
+
