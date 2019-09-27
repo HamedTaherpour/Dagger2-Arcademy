@@ -3,6 +3,7 @@ package ir.arcademy.sinadalvand.dagger2
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ir.arcademy.sinadalvand.dagger2.di.DaggerArcademyComponent
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val zcript = DaggerArcademyComponent.create().getZcript()
         zcript.decrypt("")
+
 
 
     }
