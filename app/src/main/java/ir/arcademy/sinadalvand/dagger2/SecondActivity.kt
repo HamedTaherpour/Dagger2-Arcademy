@@ -13,8 +13,8 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
 
 
-        val zcript = DaggerArcademyComponent.create().getZcript()
-        zcript.decrypt("")
+//        val zcript = DaggerArcademyComponent.create().getZcript()
+//        zcript.decrypt("")
 
     }
     
