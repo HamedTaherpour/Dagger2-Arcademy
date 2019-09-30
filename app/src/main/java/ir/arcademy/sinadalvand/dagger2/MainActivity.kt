@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import ir.arcademy.sinadalvand.dagger2.di.DaggerArcademyComponent
 import java.util.*
+import javax.inject.Qualifier
 
 
 class MainActivity : AppCompatActivity() {
