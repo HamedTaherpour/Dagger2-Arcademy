@@ -2,6 +2,7 @@ package ir.arcademy.sinadalvand.dagger2
 
 import android.util.Base64
 import android.util.Log
+import ir.arcademy.sinadalvand.dagger2.di.qualifier.CustomZsecureName
 import javax.inject.Inject
 
 class Zcript @Inject constructor() {
@@ -12,6 +13,7 @@ class Zcript @Inject constructor() {
 
     // arcademy ==> Qxlkacmklv=
     fun encrypt(str: String): String {
+        Log.e("Zcript Log","Encryption done by key=${zsecure?.Z_KEY}")
         return Base64.encodeToString(str.toByteArray(), Base64.DEFAULT)
     }
 
@@ -22,7 +24,7 @@ class Zcript @Inject constructor() {
 
 
     @Inject
-    fun ZsecureInject(zsecure: Zsecure) {
+    fun ZsecureInject(@CustomZsecureName zsecure: Zsecure) {
         this.zsecure = zsecure
     }
 
