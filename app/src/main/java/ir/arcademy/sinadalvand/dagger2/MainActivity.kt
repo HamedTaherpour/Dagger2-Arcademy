@@ -27,5 +27,10 @@ class MainActivity : AppCompatActivity() {
         val value = safePref.get("key", "")
         Log.e("MainActivity", "Value is : ${value}")
 
+
+
+        val safePref2 = component.getSafePref2()
+        safePref2.put("key2","arcademy2")
+
     }
 }

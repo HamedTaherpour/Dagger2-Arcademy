@@ -4,6 +4,7 @@ import android.util.Base64
 import android.util.Log
 import ir.arcademy.sinadalvand.dagger2.di.qualifier.CustomZsecureName
 import javax.inject.Inject
+import javax.inject.Named
 
 class Zcript @Inject constructor() {
 
@@ -24,7 +25,7 @@ class Zcript @Inject constructor() {
 
 
     @Inject
-    fun ZsecureInject(@CustomZsecureName zsecure: Zsecure) {
+    fun ZsecureInject( @Named("Zsecure2") zsecure: Zsecure) {
         this.zsecure = zsecure
     }
 

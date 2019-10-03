@@ -6,6 +6,7 @@ import dagger.Component
 import ir.arcademy.sinadalvand.dagger2.SafePref
 import ir.arcademy.sinadalvand.dagger2.Zcript
 import ir.arcademy.sinadalvand.dagger2.di.module.ApplicationModule
+import javax.inject.Named
 
 @Component(modules = [ApplicationModule::class])
 interface ArcademyComponent {
@@ -13,7 +14,11 @@ interface ArcademyComponent {
 
     fun getZcript(): Zcript
 
+    @Named("safepref1")
     fun getSafePref(): SafePref
+
+    @Named("safepref2")
+    fun getSafePref2(): SafePref
 
 
     @Component.Builder
