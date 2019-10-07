@@ -12,12 +12,9 @@ class SecondActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        (applicationContext as DaggerApplication).daggerComponent.secondActivityInject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-
-
-        val component = DaggerArcademyComponent.builder().setContext(this).build()
-        component.secondActivityInject(this)
 
 
         safePref.put("blabla","Arcademy2")
