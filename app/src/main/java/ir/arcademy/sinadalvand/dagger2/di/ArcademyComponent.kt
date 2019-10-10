@@ -9,7 +9,9 @@ import ir.arcademy.sinadalvand.dagger2.SecondActivity
 import ir.arcademy.sinadalvand.dagger2.Zcript
 import ir.arcademy.sinadalvand.dagger2.di.module.ApplicationModule
 import javax.inject.Named
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [ApplicationModule::class])
 interface ArcademyComponent {
 

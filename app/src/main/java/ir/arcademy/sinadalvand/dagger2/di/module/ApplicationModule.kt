@@ -8,6 +8,7 @@ import ir.arcademy.sinadalvand.dagger2.Zcript
 import ir.arcademy.sinadalvand.dagger2.Zsecure
 import ir.arcademy.sinadalvand.dagger2.di.qualifier.CustomZsecureName
 import javax.inject.Named
+import javax.inject.Singleton
 
 @Module
 class ApplicationModule {
@@ -47,6 +48,7 @@ class ApplicationModule {
     }
 
 
+    @Singleton
     @Named("safepref1")
     @Provides
     fun getSafePref1(context: Context, @Named("Zcript1") zcript: Zcript): SafePref {

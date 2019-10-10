@@ -3,6 +3,7 @@ package ir.arcademy.sinadalvand.dagger2
 import android.content.Context
 import android.util.Log
 import javax.inject.Inject
+import javax.inject.Singleton
 
 class SafePref @Inject constructor(val context: Context, val zcript: Zcript) {
 

@@ -20,14 +20,20 @@ class MainActivity : AppCompatActivity() {
     lateinit var autoSafePref: SafePref
 
 
+    @Inject
+    @field:Named("safepref1")
+    lateinit var autoSafePref2: SafePref
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         (applicationContext as DaggerApplication).daggerComponent.mainActivityInject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
+        Log.e("MainActivity","safepref1: $autoSafePref    safepref2: $autoSafePref2")
 
-        autoSafePref.put("key", "Arcademy")
+//        autoSafePref.put("key", "Arcademy")
 
 
 //        val safePref = component.getSafePref()
