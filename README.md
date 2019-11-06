@@ -1,5 +1,6 @@
-# Dagger2-Arcademy
-Source code of Dagger 2 Tutorial (Arcademy.ir)<img src="https://github.com/sinadalvand/Dagger2-Arcademy/blob/master/art/logo.png" width="100"/>
+# Dagger2-Arcademy <img src="https://github.com/sinadalvand/Dagger2-Arcademy/blob/master/art/logo.png" width="70"/>
+
+Source code of Dagger 2 Tutorial (Arcademy.ir)
 
 
 
