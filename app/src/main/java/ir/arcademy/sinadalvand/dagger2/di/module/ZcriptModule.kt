@@ -5,10 +5,12 @@ import dagger.Provides
 import ir.arcademy.sinadalvand.dagger2.Zcript
 import ir.arcademy.sinadalvand.dagger2.Zsecure
 import javax.inject.Named
+import javax.inject.Singleton
 
 @Module
 class ZcriptModule {
 
+    @Singleton
     @Named("Zcript1")
     @Provides
     fun getZcript1(@Named("Zsecure1") zsecure: Zsecure): Zcript {

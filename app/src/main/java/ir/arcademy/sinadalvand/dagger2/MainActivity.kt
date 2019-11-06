@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import ir.arcademy.sinadalvand.dagger2.di.DaggerActivityComponent
 import ir.arcademy.sinadalvand.dagger2.di.DaggerArcademyComponent
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -35,8 +36,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        DaggerActivityComponent.builder().arcademyComponent((applicationContext as DaggerApplication).daggerComponent).build().mainActivityInject(this)
 
-        Log.e("MainActivity","safepref1: $autoSafePref    safepref2: $autoSafePref2")
+
+        Log.e("MainActivity","safepref1: $autoSafePref    safepref2: $autoSafePref2    zcript: $zcript")
 
 //        autoSafePref.put("key", "Arcademy")
 

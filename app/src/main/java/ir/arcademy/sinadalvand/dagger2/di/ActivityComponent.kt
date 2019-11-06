@@ -4,8 +4,10 @@ import dagger.Component
 import ir.arcademy.sinadalvand.dagger2.MainActivity
 import ir.arcademy.sinadalvand.dagger2.SecondActivity
 import ir.arcademy.sinadalvand.dagger2.di.module.SafePrefModule
+import ir.arcademy.sinadalvand.dagger2.di.scope.ActivityScope
 
-@Component(modules = [SafePrefModule::class])
+@ActivityScope
+@Component(dependencies = [ArcademyComponent::class], modules = [SafePrefModule::class])
 interface ActivityComponent {
 
 
@@ -13,4 +15,6 @@ interface ActivityComponent {
 
 
     fun secondActivityInject(activity: SecondActivity)
+
+
 }

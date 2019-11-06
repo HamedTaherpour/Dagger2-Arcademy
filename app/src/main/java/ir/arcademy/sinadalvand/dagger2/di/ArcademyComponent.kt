@@ -12,20 +12,13 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [ZcriptModule::class,ZsecureModule::class])
+@Component(modules = [ZcriptModule::class, ZsecureModule::class])
 interface ArcademyComponent {
 
-
+    @Named("Zcript1")
     fun getZcript(): Zcript
 
-    @Named("safepref1")
-    fun getSafePref(): SafePref
-
-    @Named("safepref2")
-    fun getSafePref2(): SafePref
-
-
-
+    fun getContext(): Context
 
 
     @Component.Builder
