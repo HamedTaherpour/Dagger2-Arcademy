@@ -25,8 +25,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var autoSafePref2: SafePref
 
 
+    @Inject
+    @field:Named("Zcript1")
+    lateinit var zcript: Zcript
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        (applicationContext as DaggerApplication).daggerComponent.mainActivityInject(this)
+//        (applicationContext as DaggerApplication).daggerComponent.mainActivityInject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 

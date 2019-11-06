@@ -11,41 +11,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
-class ApplicationModule {
-
-    @Named("Zsecure1")
-    @Provides
-    fun getZsecure(): Zsecure {
-        val zsecure = Zsecure()
-        zsecure.Z_KEY = "5464"
-        return zsecure
-    }
-
-
-    @Named("Zsecure2")
-    @Provides
-    fun getZsecure2(): Zsecure {
-        val zsecure = Zsecure()
-        zsecure.Z_KEY = "111111"
-        return zsecure
-    }
-
-    @Named("Zcript1")
-    @Provides
-    fun getZcript1(@Named("Zsecure1") zsecure: Zsecure): Zcript {
-        val zcript = Zcript()
-        zcript.ZsecureInject(zsecure)
-        return zcript
-    }
-
-
-    @Named("Zcript2")
-    @Provides
-    fun getZcript2(@Named("Zsecure2") zsecure: Zsecure): Zcript {
-        val Zcript = Zcript()
-        Zcript.ZsecureInject(zsecure)
-        return Zcript
-    }
+class SafePrefModule {
 
 
     @Singleton

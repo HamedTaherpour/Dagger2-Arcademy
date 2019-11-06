@@ -1,9 +1,8 @@
 package ir.arcademy.sinadalvand.dagger2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import ir.arcademy.sinadalvand.dagger2.di.DaggerArcademyComponent
+import androidx.appcompat.app.AppCompatActivity
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -19,8 +18,14 @@ class SecondActivity : AppCompatActivity() {
     lateinit var autoSafePref2: SafePref
 
 
+
+    @Inject
+    @field:Named("Zcript1")
+    lateinit var zcript: Zcript
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        (applicationContext as DaggerApplication).daggerComponent.secondActivityInject(this)
+//        (applicationContext as DaggerApplication).daggerComponent.secondActivityInject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 

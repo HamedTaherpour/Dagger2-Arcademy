@@ -3,16 +3,16 @@ package ir.arcademy.sinadalvand.dagger2.di
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
-import ir.arcademy.sinadalvand.dagger2.MainActivity
 import ir.arcademy.sinadalvand.dagger2.SafePref
-import ir.arcademy.sinadalvand.dagger2.SecondActivity
 import ir.arcademy.sinadalvand.dagger2.Zcript
-import ir.arcademy.sinadalvand.dagger2.di.module.ApplicationModule
+import ir.arcademy.sinadalvand.dagger2.di.module.SafePrefModule
+import ir.arcademy.sinadalvand.dagger2.di.module.ZcriptModule
+import ir.arcademy.sinadalvand.dagger2.di.module.ZsecureModule
 import javax.inject.Named
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [ApplicationModule::class])
+@Component(modules = [ZcriptModule::class,ZsecureModule::class])
 interface ArcademyComponent {
 
 
@@ -25,10 +25,7 @@ interface ArcademyComponent {
     fun getSafePref2(): SafePref
 
 
-    fun mainActivityInject(actvity: MainActivity)
 
-
-    fun secondActivityInject(activity:SecondActivity)
 
 
     @Component.Builder
