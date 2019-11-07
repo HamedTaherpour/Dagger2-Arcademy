@@ -18,12 +18,9 @@ interface ArcademyComponent {
     fun getActivityComponent(): ActivityComponent.Builder
 
 
-    @Component.Builder
-    interface Builder {
+    @Component.Factory
+    interface Factory {
 
-        @BindsInstance
-        fun setContext(context: Context): Builder
-
-        fun build(): ArcademyComponent
+        fun create(@BindsInstance context: Context): ArcademyComponent
     }
 }
