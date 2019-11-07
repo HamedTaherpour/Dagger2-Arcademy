@@ -15,10 +15,7 @@ import javax.inject.Singleton
 @Component(modules = [ZcriptModule::class, ZsecureModule::class])
 interface ArcademyComponent {
 
-    @Named("Zcript1")
-    fun getZcript(): Zcript
-
-    fun getContext(): Context
+    fun getActivityComponent(): ActivityComponent.Builder
 
 
     @Component.Builder

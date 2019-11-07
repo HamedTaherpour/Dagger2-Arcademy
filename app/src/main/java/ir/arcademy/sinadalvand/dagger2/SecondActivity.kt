@@ -3,7 +3,6 @@ package ir.arcademy.sinadalvand.dagger2
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import ir.arcademy.sinadalvand.dagger2.di.DaggerActivityComponent
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -29,10 +28,12 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        DaggerActivityComponent.builder()
-            .arcademyComponent((applicationContext as DaggerApplication).daggerComponent).build()
-            .secondActivityInject(this)
+//        DaggerActivityComponent.builder()
+//            .arcademyComponent((applicationContext as DaggerApplication).daggerComponent).build()
+//            .secondActivityInject(this)
 
+        val activityComponent = (applicationContext as DaggerApplication).daggerComponent.getActivityComponent()
+        activityComponent.getBlaBlaString("saasd").build().secondActivityInject(this)
 
         Log.e(
             "SecondActivity",
