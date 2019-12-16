@@ -24,13 +24,9 @@ class SecondActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-//        (applicationContext as DaggerApplication).daggerComponent.secondActivityInject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-//        DaggerActivityComponent.builder()
-//            .arcademyComponent((applicationContext as DaggerApplication).daggerComponent).build()
-//            .secondActivityInject(this)
 
         val activityComponent = (applicationContext as DaggerApplication).daggerComponent.getActivityComponent()
         activityComponent.getBlaBlaString("saasd").build().secondActivityInject(this)

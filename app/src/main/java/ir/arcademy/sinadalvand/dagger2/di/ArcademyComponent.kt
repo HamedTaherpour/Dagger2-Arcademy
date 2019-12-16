@@ -5,14 +5,12 @@ import dagger.BindsInstance
 import dagger.Component
 import ir.arcademy.sinadalvand.dagger2.SafePref
 import ir.arcademy.sinadalvand.dagger2.Zcript
-import ir.arcademy.sinadalvand.dagger2.di.module.SafePrefModule
-import ir.arcademy.sinadalvand.dagger2.di.module.ZcriptModule
-import ir.arcademy.sinadalvand.dagger2.di.module.ZsecureModule
+import ir.arcademy.sinadalvand.dagger2.di.module.*
 import javax.inject.Named
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [ZcriptModule::class, ZsecureModule::class])
+@Component(modules = [ZcriptModule::class, ZsecureModule::class,TempModule1::class,TempModule2::class])
 interface ArcademyComponent {
 
     fun getActivityComponent(): ActivityComponent.Builder

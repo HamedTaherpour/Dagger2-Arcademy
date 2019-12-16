@@ -2,6 +2,7 @@ package ir.arcademy.sinadalvand.dagger2.di.module
 
 import dagger.Module
 import dagger.Provides
+import dagger.multibindings.IntKey
 import ir.arcademy.sinadalvand.dagger2.Zcript
 import ir.arcademy.sinadalvand.dagger2.Zsecure
 import javax.inject.Named
