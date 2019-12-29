@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import dagger.android.AndroidInjection
+import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.HashMap
 import java.util.HashSet
@@ -11,7 +13,7 @@ import javax.inject.Inject
 import javax.inject.Named
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
 
     @Inject
     @field:Named("safepref1")
@@ -28,30 +30,31 @@ class MainActivity : AppCompatActivity() {
     lateinit var zcript: Zcript
 
     @Inject
-    lateinit var zsecures :Map<String,Zsecure>
+    lateinit var zsecures: Map<String, Zsecure>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val activityComponent = (applicationContext as DaggerApplication).daggerComponent.getActivityComponent()
-        activityComponent.getBlaBlaString("sadasd").build().mainActivityInject(this)
 
-        Log.e("MainActivity","safepref1: $autoSafePref    safepref2: $autoSafePref2    zcript: $zcript")
+
+        Log.e(
+            "MainActivity",
+            "safepref1: $autoSafePref    safepref2: $autoSafePref2    zcript: $zcript"
+        )
 
 
 
         button.setOnClickListener {
-            val intent = Intent(this,SecondActivity::class.java)
+            val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
 
 
-        for (i in zsecures){
-            Log.e("App",i.key+":"+i.value.Z_KEY)
+        for (i in zsecures) {
+            Log.e("App", i.key + ":" + i.value.Z_KEY)
         }
-
 
 
     }
