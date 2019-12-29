@@ -1,0 +1,20 @@
+package ir.arcademy.sinadalvand.dagger2.di.module;
+
+import java.lang.System;
+
+@kotlin.Metadata(mv = {1, 1, 15}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u00020\u0001B\u0005\u00a2\u0006\u0002\u0010\u0002J\b\u0010\u0003\u001a\u00020\u0004H\u0007\u00a8\u0006\u0005"}, d2 = {"Lir/arcademy/sinadalvand/dagger2/di/module/TempModule1;", "", "()V", "provideZsecure", "Lir/arcademy/sinadalvand/dagger2/Zsecure;", "app_debug"})
+@dagger.Module()
+public final class TempModule1 {
+    
+    @org.jetbrains.annotations.NotNull()
+    @dagger.multibindings.StringKey(value = "zsc1")
+    @dagger.multibindings.IntoMap()
+    @dagger.Provides()
+    public final ir.arcademy.sinadalvand.dagger2.Zsecure provideZsecure() {
+        return null;
+    }
+    
+    public TempModule1() {
+        super();
+    }
+}

@@ -1,0 +1,4 @@
+#Sun Dec 29 14:41:20 IRST 2019
+base.0=C\:\\Developing\\Project\\Android\\Dagger2Arcademy\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

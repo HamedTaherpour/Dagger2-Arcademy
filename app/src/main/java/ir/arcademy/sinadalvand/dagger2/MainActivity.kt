@@ -13,7 +13,7 @@ import javax.inject.Inject
 import javax.inject.Named
 
 
-class MainActivity : DaggerAppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     @Inject
     @field:Named("safepref1")
@@ -37,6 +37,8 @@ class MainActivity : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        AndroidInjection.inject(this)
 
 
         Log.e(
