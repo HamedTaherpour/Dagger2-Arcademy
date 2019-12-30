@@ -39,4 +39,6 @@ dependencies {
     api 'com.google.dagger:dagger-android-support:2.24' // if you use the support libraries
     kapt 'com.google.dagger:dagger-android-processor:2.24'
 
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
 }

@@ -4,8 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
 import dagger.android.AndroidInjection
 import dagger.android.support.DaggerAppCompatActivity
+import ir.arcademy.sinadalvand.dagger2.viewmodels.MainActivityViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.HashMap
 import java.util.HashSet
@@ -36,9 +38,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
         AndroidInjection.inject(this)
+
+        val vmInjector = ViewModelInjector(MainActivityViewModel(autoSafePref))
+        val vm = ViewModelProviders.of(this, vmInjector)[MainActivityViewModel::class.java]
+        vm.printSafePref()
 
 
         Log.e(
