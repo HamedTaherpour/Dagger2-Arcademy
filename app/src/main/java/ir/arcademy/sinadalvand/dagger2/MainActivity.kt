@@ -34,14 +34,16 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var zsecures: Map<String, Zsecure>
 
+    @Inject
+    lateinit var factory:ViewModelInjector
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         AndroidInjection.inject(this)
 
-        val vmInjector = ViewModelInjector(MainActivityViewModel(autoSafePref))
-        val vm = ViewModelProviders.of(this, vmInjector)[MainActivityViewModel::class.java]
+        val vm = ViewModelProviders.of(this, factory)[MainActivityViewModel::class.java]
         vm.printSafePref()
 
 

@@ -27,11 +27,15 @@ class SecondActivity : DaggerAppCompatActivity() {
     lateinit var zcript: Zcript
 
 
+    @Inject
+    lateinit var factory:ViewModelInjector
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val vm = ViewModelProviders.of(this)[SecondActivityViewModel::class.java]
+        val vm = ViewModelProviders.of(this,factory)[SecondActivityViewModel::class.java]
         vm.printSafePref()
 
         Log.e(

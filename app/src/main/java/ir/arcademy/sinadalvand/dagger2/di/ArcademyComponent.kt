@@ -13,7 +13,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AndroidInjectionModule::class, ZcriptModule::class, ZsecureModule::class, TempModule1::class, TempModule2::class, ActivityModule::class])
+@Component(modules = [AndroidInjectionModule::class, ViewModelModule::class,ZcriptModule::class, ZsecureModule::class, TempModule1::class, TempModule2::class, ActivityModule::class])
 interface ArcademyComponent : AndroidInjector<ArcademyApplication> {
 
     
